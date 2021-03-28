@@ -1,0 +1,71 @@
+﻿@page
+@model DatabaseEntityFrameworkCoreRazor.Pages.ListModel
+@{
+}
+
+<h1>List</h1>
+
+<p>
+	<a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Users[0].ID)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Users[0].Name)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Users[0].Password)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Users[0].Age)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Users[0].Email)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Users[0].Birthday)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Users[0].UpdateDateTime)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.Users)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.ID)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Name)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Password)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Age)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Email)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Birthday)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.UpdateDateTime)
+				</td>
+				<td>
+					<a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+					<a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+					<a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

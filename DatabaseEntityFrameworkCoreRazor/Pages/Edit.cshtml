@@ -1,0 +1,60 @@
+﻿@page
+@model DatabaseEntityFrameworkCoreRazor.Pages.EditModel
+@{
+}
+
+<h1>Edit</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="UserInfo.ID" class="control-label"></label>
+				<input asp-for="UserInfo.ID" class="form-control" readonly="readonly" />
+				<span asp-validation-for="UserInfo.ID" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="UserInfo.Name" class="control-label"></label>
+				<input asp-for="UserInfo.Name" class="form-control" />
+				<span asp-validation-for="UserInfo.Name" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="UserInfo.Password" class="control-label"></label>
+				<input asp-for="UserInfo.Password" class="form-control" type="password" />
+				<span asp-validation-for="UserInfo.Password" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="UserInfo.Age" class="control-label"></label>
+				<input asp-for="UserInfo.Age" class="form-control" />
+				<span asp-validation-for="UserInfo.Age" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="UserInfo.Email" class="control-label"></label>
+				<input asp-for="UserInfo.Email" class="form-control" />
+				<span asp-validation-for="UserInfo.Email" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="UserInfo.Birthday" class="control-label"></label>
+				<input asp-for="UserInfo.Birthday" class="form-control" type="date" />
+				<span asp-validation-for="UserInfo.Birthday" class="text-danger"></span>
+			</div>
+			@*
+			<div class="form-group">
+					<label asp-for="UpdateDateTime" class="control-label"></label>
+					<input asp-for="UpdateDateTime" class="form-control" />
+					<span asp-validation-for="UpdateDateTime" class="text-danger"></span>
+			</div>
+			*@
+			<div class="form-group">
+				<input type="submit" value="Save" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div>
+	<a asp-page="List">Back to List</a>
+</div>

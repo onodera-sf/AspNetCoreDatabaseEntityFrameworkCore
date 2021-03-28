@@ -1,0 +1,59 @@
+﻿@page
+@model DatabaseEntityFrameworkCoreRazor.Pages.DetailsModel
+@{
+}
+
+<h1>Details</h1>
+
+<div>
+	<h4>User</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.UserInfo.ID)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.UserInfo.ID)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.UserInfo.Name)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.UserInfo.Name)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.UserInfo.Password)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.UserInfo.Password)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.UserInfo.Age)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.UserInfo.Age)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.UserInfo.Email)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.UserInfo.Email)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.UserInfo.Birthday)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.UserInfo.Birthday)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.UserInfo.UpdateDateTime)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.UserInfo.UpdateDateTime)
+		</dd>
+	</dl>
+</div>
+<div>
+	<a asp-page="./Edit" asp-route-id="@Model.UserInfo.ID">Edit</a> |
+	<a asp-page="List">Back to List</a>
+</div>
